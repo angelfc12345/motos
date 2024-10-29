@@ -1,0 +1,49 @@
+[
+    {
+        "modelo":" NINJA 567",
+        "produccion":2010,
+        "PRECIO":12000,
+        "imagen":"img/KTM4.webp",
+        "enlace": "uno.html"
+  
+    },
+    {
+        "modelo":"NINJA 12MK",
+        "produccion":2010,
+        "PRECIO":12000,
+        "imagen": "img/ducati4.jpg",
+        "enlace": "dos.html"
+    },
+    
+    
+    {
+        "modelo":"NINJA AULUS 45",
+        "produccion":2010,
+        "PRECIO":12000,
+        "imagen":"img/KTM5.jpg",
+        "enlace": "index1.html"
+    },
+    {
+        "modelo":"NINJA ZEUS",
+        "produccion":2010,
+        "PRECIO":12000,
+        "imagen":"img/KTM6.jpg",
+        "enlace": "index1.html"
+    },
+    {
+        "modelo":"NINJA ADES",
+        "produccion":2010,
+        "PRECIO":12000,
+        "imagen":"img/KTM7.png",
+        "enlace": "pg.html"
+    },
+    {
+        "modelo":"NINJA TRUENO",
+        "produccion":2010,
+        "PRECIO":12000,
+        "imagen":"img/KTMSPRDUKE.jpg",
+        "enlace": "pg.html"
+    }
+    
+    
+]

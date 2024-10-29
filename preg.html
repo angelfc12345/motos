@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas frecuentes </title>
+    <link rel="stylesheet" href="preg.css">
+    
+   
+</head>
+<nav>
+    <ul>
+        <li><a href="INCIO.html">Inicio</a></li>
+        <li><a href="index3.html">Nosotros</a></li>
+        <li><a href="index4.html">Contacto</a></li>
+        <li><a href="preg.html">Preguntas Frecuentes</a></li>
+        <li><a href="index3.html">Blog</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="indexjson.html">PRODUCTOS</P></a></li>
+        <li><a href="indexpro.html">compras</a></li>
+    </ul>
+</nav>
+<body>
+    <h1>preguntas - frecuentes</h1>
+    <div class="faq-conteiner">
+        <div class="faq-intem">
+            <h2>¿Que marcas de motos venden?</h2>
+            <p>Vendemos una amplia gama de motos,incluyendo honda yamaha y muchas mas variedades</p>
+            
+        </div>
+        <div class="faq-item">
+            <h2>¿ofrecen financiamiento bancario para la compra de motos?</h2>
+            <p>Si,ofrecemos contamos con agentes de financiamiento bancario</p>
+        </div>
+        <div class="faq-item">
+            <h2>¿las motos vienen con garantia?</h2>
+            <p>Todas nuestras motos nuevas vienen con garantia de nuestros fabricantes con cobertura total</p>
+
+        </div>
+        <div class="faq-item">
+            <h2>¿tienen servicio de mantenimiento y reparación?</h2>
+            <p>Contamos con completo servicio de mantenimiento para nuestros clientes</p>
+
+        </div>
+        <div class="faq-item">
+            <h2>¿puedo pobrar la moto antes de comprarla?</h2>
+            <p>Si, ofrecemos el manejo para la mayoria de nuestros modelos</p>
+
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-item h2').forEach(function(item) {
+            item.addEventListener('click', function() {
+                const p = this.nextElementSibling;
+                p.style.display = p.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+body{
+    background-color: rgba(110, 27, 27, 0.973);
+    background-image: url(img/images\ \(2\).jfif);
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+}
+img{
+text-align: center;
+display: block; /* Hace que las imágenes se centren horizontalmente */
+margin: 0 auto;
+max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
+height: auto;
+}
+.cabecera{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 0.5rem 0;
+
+}
+h3{
+    text-align: center;
+    background-color: rgb(240, 58, 58);
+
+}
+h1{
+    color: rgb(2, 2, 0);
+    text-align: center;
+    margin: 1rem 0;
+}
+.flex-container1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas nuevas */
+    gap: 1rem; /* Añade espacio entre los elementos */
+    padding: 1rem;
+    
+ 
+}
+.caja:hover{
+    transition: all 400ms ease;
+    transform: translate(-3%);
+}
+.caja1:hover{
+    transition: all 400ms ease;
+    transform: translate(-3%);
+}
+.caja{
+    width: 10rem;
+    height: 13rem;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 1rem;
+    /* font-size: 3rem; */
+    color: aliceblue;
+    transition: all 400ms ease;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    width: calc(100% - 2rem); /* Ajusta el tamaño para móviles */
+    max-width: 10rem; /* Tamaño máximo */
+
+
+}
+
+.caja1{
+    width: 22rem;
+    height: 13rem;
+    background-color: rgb(143, 42, 35);
+    text-align: center;
+    margin: 1rem;
+    color: aliceblue;
+    transition: all 400ms ease;
+    transition: all 400ms ease;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    width: calc(100% - 2rem); /* Ajusta el tamaño para móviles */
+    max-width: 10rem; /* Tamaño máximo */
+
+
+
+}
+.flex-container2{
+    display: flex;
+    justify-content: center;
+    transition: all 400ms ease;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas nuevas */
+    gap: 1rem; /* Añade espacio entre los elementos */
+    padding: 1rem;
+
+}
+.pie{
+    text-align: center;
+    background-color: rgb(146, 2, 2);
+    color: rgb(3, 3, 3);
+    /* color: rgb(213, 243, 43); */
+    padding: 0.1rem;
+}
+/* Media Queries para ajustes en diferentes tamaños de pantalla */
+@media (min-width: 600px) {
+    .caja, .caja1 {
+        width: calc(50% - 2rem); /* Ajusta el tamaño para tabletas */
+    }
+}
+
+@media (min-width: 992px) {
+    .caja {
+        width: 10rem;
+    }
+    
+    .caja1 {
+        width: 22rem;
+    }
+}
+
+

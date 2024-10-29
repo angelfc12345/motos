@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: rgb(2, 14, 24);
+}
+ .conteiner{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en nuevas líneas */
+    gap: 20px; /* Añade espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas */
+ }
+ .card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    flex: 1 1 calc(100% - 40px); /* Ancho para móviles */
+ }
+ .card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translate(-3%);
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+    flex: 1 1 calc(100% - 40px); /* Ancho para móviles */
+
+ }
+ .card img{
+   width: 100%;
+   height: 210px;
+ }
+ .card.contenido{
+   padding: 15px;
+   text-align: center;
+ }
+ .card.contenido p{
+   line-height: 1.5;
+   color: #6a6a6a;
+ }
+ .card.contenido h3{
+  font-weight: 400;
+  margin-bottom: 15px;
+
+ }
+ .card.contenido a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  color: #2fb4cc;
+  border: 1px solid #2fb4cc;
+  border-radius:4px ;
+  transition: all 400ms ease;
+ }
+ /* Media Queries para ajustes en diferentes tamaños de pantalla */
+@media (min-width: 600px) {
+  .card {
+      flex: 1 1 calc(50% - 40px); /* Ancho ajustado para tabletas */
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+      flex: 1 1 calc(33.33% - 40px); /* Ancho ajustado para pantallas más grandes */
+  }
+}
+
+ 

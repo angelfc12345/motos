@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(34, 22, 22);
+            margin: 0;
+            padding: 0;
+        }
+
+        .autos {
+            border-style: outset;
+            width: 100%;
+            padding: 20px;
+            margin: 20px;
+            background-color: rgb(173, 14, 14);
+        }
+
+        .boton-verde {
+            width: auto;/*DE 5 REM A AUTO PARA QUE SEA MAS FLEXIBLE */
+            background-color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 10%;
+            font-size: 1rem;/*PARA EL MANEJO DE FUENTE MAS FLEXIBLE*/
+            text-align: center;
+        }
+
+        .principal {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*AÑADI EL MINMAX PARA QUE EL GRID SEA ADAPTABLE*/
+            gap: 2rem;/*AÑADI TAMBIEN EL GAP PARA SEPARAR LOS ELEMENTOS DE FORMA MAS COHERENTE */
+            padding: 2rem;
+        }
+
+        .autitos {
+            text-align: center;
+        }
+
+        p {
+            font-family: monospace;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border: ridge;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            text-align: center;
+            color: white;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            text-align: center;
+            color: white;
+        }
+
+        .datos {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;/*    cambiar los rem para para pantallas hasta 768px*/
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .boton-verde {
+                font-size: 0.9rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;/*para pantallas moviels es mas pequeño */
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .boton-verde {
+                font-size: 0.8rem;/*tamaño mas peque del boton para moviles */
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            img {
+                max-width: 100%;/*asegura que las imagenes no se desborden en las pantallas moviles.*/
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON OBJECT CREATION IN JAVASCRIPT</h1>
+    <h2>MOTOS</h2>
+    <main class="principal">
+    </main>
+
+    <script>
+        const getCarros = async () => {
+            const response = await fetch("autos.json");
+            const data = await response.json();
+            let out = `<div class="principal">`;
+            data.forEach((productos) => {
+                out += `
+                <div class="autos">
+                    <div class="autitos">
+                        <h3>${productos.modelo}</h3>
+                        <img src="${productos.imagen}" alt="Imagen de ${productos.modelo}">
+                        <div class="datos">
+                            <p>Producción: ${productos.produccion}</p>
+                            <p>Millaje: ${productos.millaje}</p>
+                            <p><a href="${productos.enlace}" class="boton-verde">Ver Producto</a></p>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+            document.querySelector('.principal').innerHTML = out;
+        };
+        getCarros();
+    </script>
+</body>
+</html>
